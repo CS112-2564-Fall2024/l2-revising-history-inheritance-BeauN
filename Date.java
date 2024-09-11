@@ -241,11 +241,30 @@ public class Date
 	public String toString()
 	{
 		return this.monthToInt(this.month) + "/" + this.day + "/" + this.year;
-		
+
 		//OTHER OPTIONS (just make sure to update documentation appropriately):
 		//return this.month + " " + this.day + ", " + this.year; //USA
 		//return  this.day + " " + this.month  + ", " + this.year; //other countries
 	}
+
+	//Wensday!
+	//we will have an array to sort dates, so historical events are listed in order
+	/**public int compareTo(Object other) {
+		Date otherDate;
+		if (other == null) {
+			return -1;
+		}
+		else if (!(other instanceof Date)) {
+			return -1;
+		}
+					//Type casting to date. 
+		otherDate = (Date) other;
+		if(otherDate.month > this.month){
+			
+		}
+		return 1;
+	} 
+		**/
 	
 	@Override
 	public boolean equals(Object other)
@@ -267,7 +286,7 @@ public class Date
 					&& this.year == otherDate.year;
 		}
 	}
-
+	
 	/**
 	 * Determines if calling object comes before param Date (checks month, day, year completely)
 	 * 
